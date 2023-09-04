@@ -36,7 +36,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout Sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - run: ./assets/ci_download.sh
       - name: Setup sccache
         uses: mozilla-actions/sccache-action@v0.0.3
@@ -56,7 +56,7 @@ jobs:
         run: curl ifconfig.me
         continue-on-error: true
       - name: Checkout Sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - run: ./assets/ci_download.sh
       - name: Setup sccache
         uses: mozilla-actions/sccache-action@v0.0.3
@@ -84,7 +84,7 @@ jobs:
       # To help investigate transient test failures
       - run: lscpu
       - name: Checkout Sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: forest-${{ runner.os }}
@@ -107,7 +107,7 @@ jobs:
       # To help investigate transient test failures
       - run: lscpu
       - name: Checkout Sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: forest-${{ runner.os }}
@@ -134,7 +134,7 @@ jobs:
       # To help investigate transient test failures
       - run: lscpu
       - name: Checkout Sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: forest-${{ runner.os }}
@@ -157,7 +157,7 @@ jobs:
       # To help investigate transient test failures
       - run: lscpu
       - name: Checkout Sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: forest-${{ runner.os }}
@@ -182,7 +182,7 @@ jobs:
       # To help investigate transient test failures
       - run: lscpu
       - name: Checkout Sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: forest-${{ runner.os }}
@@ -203,7 +203,7 @@ jobs:
       - build-ubuntu
     steps:
       - name: Checkout Sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: forest-${{ runner.os }}
